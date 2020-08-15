@@ -1,0 +1,118 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  font-size: inherit;
+}
+
+body{
+  @extend %lato-normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid{
+  max-width: 1940px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title{
+  @extend %montserat-bold;
+  font-size: 40px;
+  line-height: 62.4px;
+  color: $text;
+}
+
+.suptitle{
+  position: relative;
+  padding: 0 0 0 50px;
+  @extend %lato-normal;
+  font-size: 14px;
+  line-height: 17px;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $tomato;
+  }
+}
+
+.button{
+  display: block;
+  padding: 16px 20px;
+  width: 370px;
+  background-color: $tomato;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  transition: all .3s;
+  &:hover{
+    background-color: #e96d67;
+  }
+}
+
+.slider-group .slick-prev.slick-arrow,
+.slider-level .slick-prev.slick-arrow{
+  right: 60px;
+  background: url(../images/icons/arrow-right.svg) no-repeat;
+}
+.slider-group .slick-next.slick-arrow,
+.slider-level .slick-next.slick-arrow{
+  left: 60px;
+  background: url(../images/icons/arrow-left.svg) no-repeat;
+}
+
+.slider-group .slick-arrow,
+.slider-level .slick-arrow{
+  background-size: cover;
+  position: absolute;
+  bottom: -24%;
+  z-index: 2;
+  font-size: 0;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.slick-slide {
+  outline: none
+}
